@@ -13,6 +13,7 @@ func main(){
 	router:=gin.Default()
 
 	router.POST("/",routes.CreatePost)
+	router.GET("/post/:postId",routes.GetOne)
 
 	// Connecting to the database
 	router.Run("localhost:8080")
