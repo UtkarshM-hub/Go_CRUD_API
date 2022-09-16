@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Go_CRUD_API/Routes"
+	routes "github.com/Go_CRUD_API/Routes"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )
@@ -14,6 +14,7 @@ func main(){
 
 	router.POST("/",routes.CreatePost)
 	router.GET("/post/:postId",routes.GetOne)
+	router.PUT("/update/:postId",routes.UpdateOne)
 
 	// Connecting to the database
 	router.Run("localhost:8080")
