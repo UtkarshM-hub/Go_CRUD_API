@@ -15,6 +15,7 @@ func main(){
 	router.POST("/",routes.CreatePost)
 	router.GET("/post/:postId",routes.GetOne)
 	router.PUT("/update/:postId",routes.UpdateOne)
+	router.DELETE("/delete/:postId",routes.DeleteOne)
 
 	// Connecting to the database
 	router.Run("localhost:8080")
